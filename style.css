@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+  --success-color: #9de6bb;
+  --error-color: #f19388;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #4ca1af;
+  background: -webkit-linear-gradient(to right, #c4e0e5, #4ca1af);
+  background: linear-gradient(to right, #c4e0e5, #4ca1af);
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #5a5a5a;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  font-family: 'Space Mono', monospace;
+  border: 1px solid #f0f0f0;
+  color: #5a5a5a;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: -3px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: none;
+}
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+.form-control small {
+  color: var(--error-color);
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  background-color: #9de6bb;
+  border: 2px solid #9de6bb;
+  color: #ffffff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
